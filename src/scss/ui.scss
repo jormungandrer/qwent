@@ -1,0 +1,745 @@
+h3 a {
+    color:#101010;
+    text-decoration:underline;
+    &:hover {
+        text-decoration:none;
+    }
+}
+
+.large_button {
+    padding: 19px 32px 21px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #B80C09;
+    border-radius: 16px;
+    border:2px solid #B80C09;
+}
+
+.large_button:hover {
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s ease 0s;
+    background: #E02723;
+    border-color: #E02723;
+    box-shadow: 0px 12px 24px rgba(184, 12, 9, 0.3);
+}
+
+.large_button:active {
+    border: 2px solid #B80C09;
+    color: #B80C09;
+    background: none;
+    box-shadow: none;
+}
+
+.filter_button {
+    cursor: pointer;
+    display: inline-flex;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 1px solid #D1EAF5;
+    color: #0B4F6C;
+    background: #FFFFFF;
+}
+
+.filter_button_active {
+    background: #0B4F6C;
+    color: #fff;
+}
+
+.filter_button:hover {
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 12px 24px rgba(11, 79, 108, 0.2);
+}
+
+.small_button {
+    cursor: pointer;
+    font-family: 'NunitoSans';
+    display: inline-flex;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background: #0B4F6C;
+    color: #fff;
+
+    &:hover {
+        transition: all 0.3s ease 0s;
+        box-shadow: 0px 12px 24px rgba(11, 79, 108, 0.2);
+    }
+}
+
+.footer_button {
+    background: #F0F4F6;
+    border-radius: 12px;
+    padding: 10px 20px 12px;
+    color: #008DC5;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.subtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.list {
+    display: flex;
+    flex-wrap:wrap;
+}
+.list-flex-wrap {
+    display: flex;
+    flex-wrap:wrap;
+}
+.list-mx-4 {
+    margin:-20px -4px 0;
+}
+.list-mx-8 {
+    margin:-20px -8px 0;
+}
+.list-mx-10 {
+    margin:-20px -10px 0;
+}
+
+.list_gap_8 {
+    gap: 8px !important;
+}
+
+.list_gap_80 {
+    gap: 80px !important;
+}
+
+.item-content {
+    position:relative;
+    border:1px solid #D1EAF5;
+    border-radius:12px;
+    padding:8px;
+    &::before {
+        content:"";
+        box-shadow:0 4px 24px rgb(40 206 242 / 15%);
+        border-radius:16px;
+        position:absolute;
+        left:8px;
+        top:8px;
+        right:8px;
+        bottom:8px;
+        z-index:1;
+    }
+    & > * {
+        position:relative;
+        z-index:2;
+    }
+}
+
+.item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 24px rgba(40, 206, 242, 0.15);
+    border-radius: 16px;
+
+    &__title, &__image, &__description, &__time-to-read {
+        position:relative;
+        z-index:2;
+    }
+}
+
+/*
+.item__image {
+    position: relative;
+ 
+    img {
+        object-fit: contain;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}
+*/
+
+.item__image {
+    text-align:center;
+    position: relative;
+    line-height:0;
+    margin-bottom:24px;
+}
+
+.item__title {
+    margin: 0px 0px 16px 0px;
+}
+
+.item__description {
+    color: #5E6B71;
+}
+
+.item_theme_01 {
+    width:33.33333333333333%;
+    padding:20px 10px 0;
+
+    .item-content {
+        border:0;
+        padding:24px;
+        box-shadow:0px 4px 24px rgba(40, 206, 242, 0.15);
+        &::before {
+            display:none;
+        }
+    }
+
+/*
+    .item__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        height: 206px;
+        background: #F0F4F6;
+        border-radius: 12px;
+        margin: 0px 0px 24px 0px;
+        padding: 16px;
+
+        img {
+            border-radius: 1000px;
+        }
+    }
+*/
+}
+
+.item_theme_02 {
+    max-width: 448px;
+    height: auto;
+    padding: 24px;
+
+    .item__image {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 368px;
+        height: 368px;
+        margin: 0px 0px 40px 0px;
+    }
+
+    .item__image::before,
+    .item__image img {
+        border-radius: 1000px;
+
+    }
+
+    .item__image::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: conic-gradient(from 180deg at 50% 50%, rgba(1, 89, 132, 0) 0deg, #015984 360deg);
+    }
+
+    .item__image img {
+        width: calc(100% - 32px);
+        height: calc(100% - 32px);
+    }
+}
+
+.item_theme_03 {
+    max-width: 440px;
+    height: auto;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 8px;
+    margin: 8px;
+
+    .item__image {
+        max-width: 392px;
+        height: 262px;
+        border-radius: 8px;
+        margin: 0px 0px 24px 0px;
+    }
+}
+
+.item_theme_04 {
+    padding: 40px;
+    width:50%;
+    max-width: 670px;
+    height: auto;
+    box-shadow: 0px 4px 24px rgba(40, 206, 242, 0.15);
+    border-radius: 12px;
+    
+    justify-content: space-between;
+
+    .item__image {
+        display: flex;
+        justify-content: end;
+        height: 48px;
+        border-radius: 200px;
+        margin: 0px 0px 24px 0px;
+
+        img {
+            width: 48px;
+        }
+    }
+}
+
+.item_theme_05 {
+    padding: 40px;
+    max-width: 670px !important;
+    height: auto;
+    box-shadow: 0px 4px 24px rgba(40, 206, 242, 0.15);
+    border-radius: 12px;
+    margin: 12px;
+    justify-content: space-between;
+
+    .item__image {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        margin: 0px 0px 40px 0px;
+
+        img {
+            position: relative;
+            width: 80px;
+            background: url(), linear-gradient(0deg, #1877AC, #1877AC), linear-gradient(0deg, rgba(5, 60, 109, 0.75), rgba(5, 60, 109, 0.75)), url(low-angle-shot-metal-black-ceiling-with-white-ventilation-pipes.jpg);
+            background-blend-mode: color-dodge, color, normal, normal;
+            border-radius: 200px;
+        }
+    }
+}
+
+.item_theme_06,
+.item_theme_12 {
+    padding: 40px;
+    max-width: 440px;
+    height: auto;
+    box-shadow: 0px 4px 24px rgba(40, 206, 242, 0.15);
+    border-radius: 12px;
+    margin: 8px;
+    justify-content: space-between;
+
+    .item__image {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 80px;
+        margin: 0px 0px 40px 0px;
+
+        img {
+            position: relative;
+            width: 80px;
+            background: url(), linear-gradient(0deg, #1877AC, #1877AC), linear-gradient(0deg, rgba(5, 60, 109, 0.75), rgba(5, 60, 109, 0.75)), url(low-angle-shot-metal-black-ceiling-with-white-ventilation-pipes.jpg);
+            background-blend-mode: color-dodge, color, normal, normal;
+            border-radius: 200px;
+        }
+    }
+}
+
+.item_theme_12 {
+    max-width: 337px;
+}
+
+.item_theme_07 {
+    padding: 24px;
+    max-width: 346px;
+    height: auto;
+    box-shadow: 0px 4px 24px rgba(40, 206, 242, 0.15);
+    border-radius: 16px;
+    justify-content: space-between;
+
+    .item__image {
+        display: flex;
+        justify-content: start;
+        height: 48px;
+        margin: 0px 0px 80px 0px;
+
+        img {
+            position: relative;
+            width: 48px;
+            background: #0B4F6C;
+            border-radius: 200px;
+        }
+    }
+}
+
+.item_theme_08 {
+    padding: 24px;
+    max-width: 464px;
+    height: auto;
+    box-shadow: none;
+    border: 1px solid #D1EAF5;
+    border-radius: 16px;
+    justify-content: space-between;
+
+    .item__image {
+        display: flex;
+        justify-content: start;
+        height: 120px;
+        margin: 0px 0px 40px 0px;
+        color: #fff;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 120px;
+            background: url(), linear-gradient(0deg, #1877AC, #1877AC), linear-gradient(0deg, rgba(5, 60, 109, 0.75), rgba(5, 60, 109, 0.75)), url(low-angle-shot-metal-black-ceiling-with-white-ventilation-pipes.jpg);
+            background-blend-mode: color-dodge, color, normal, normal;
+            border-radius: 200px;
+        }
+    }
+}
+
+.item_theme_09 {
+    width:33.33333333333333%;
+    padding:0 8px;
+    h2 {
+        color:#015984;
+    }
+    .item-content {
+        padding:48px;
+    }
+}
+
+.item_theme_09:nth-child(2) {
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgb(40 206 242 / 15%);
+    border-radius: 16px;
+    .item-content {
+        border-color:#fff;
+        &::before {
+            box-shadow:none;
+            position:absolute;
+            width:312.84px;
+            height:617.97px;
+            left:inherit;
+            right:-95px;
+            top:-238px;
+            border-radius: 150px;
+            background:conic-gradient(from 180deg at 50% 50%, rgba(85, 132, 153, 0) 0deg, #0B4F6C 360deg);
+            opacity:0.2;
+            transform:rotate(30deg);
+        }
+    }
+}
+
+/*
+.item_theme_03::after,
+.item_theme_04::after,
+.item_theme_05::after,
+.item_theme_06::after,
+.item_theme_09::after,
+.item_theme_12::after {
+    position: absolute;
+    content: '';
+    border: 1px solid #D1EAF5;
+}
+*/
+
+.item_theme_10 {
+    padding: 24px;
+    height: auto;
+    max-width: 464px;
+    border: 1px solid #E8EAEB;
+    border-radius: 16px;
+    box-shadow: none;
+    align-items: start;
+
+    .item__image {
+        display: flex;
+        justify-content: center;
+        width: 416px;
+        height: 262px;
+        padding: 24px;
+        border-radius: 8px;
+        background: url('@img/background/background-01.jpg') center, linear-gradient(0deg, #1877AC, #1877AC), linear-gradient(0deg, rgba(5, 60, 109, 0.75), rgba(5, 60, 109, 0.75));
+        background-size: cover;
+        margin: 0px 0px 24px 0px;
+
+        img {
+            width: 151px;
+            height: 214px;
+            background: #F0F4F6;
+        }
+
+    }
+
+    .item__button {
+        margin: 32px 0px 0px 0px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #0B4F6C;
+    }
+}
+.container__flex {
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 -10px;
+}
+.item_theme_25 {
+    width:25%;
+    padding:20px 4px 0;
+}
+.item_theme_33 {
+    width:33.33333333333333%;
+    padding:20px 10px 0;
+}
+.item_theme_50 {
+    padding:20px 10px 0;
+    width:50%;
+}
+.type-job__item {
+    padding:0;
+    margin-top:48px;
+    position:relative;
+    &::before {
+        content:"";
+        position:absolute;
+        top:4px;
+        width:48px;
+        height:48px;
+
+        background:#008DC5 url(../img/icons/question.svg) center center no-repeat;
+        background-size:21px auto;
+        box-shadow:0px 12px 12px rgba(187, 195, 207, 0.25);
+        border-radius:12px;
+    }
+}
+.type-job__item:nth-child(even) {
+    padding-left:130px;
+    &::before {
+        left:50px;
+    }
+}
+.type-job__item:nth-child(odd) {
+    padding-left:80px;
+    padding-right:50px;
+    &::before {
+        left:0;
+    }
+}
+
+.item_theme_03::after,
+.item_theme_06::after,
+.item_theme_12::after {
+    top: -8px;
+    left: -8px;
+    height: calc(100% + 16px);
+    width: calc(100% + 16px);
+    border-radius: 12px;
+}
+
+.item_theme_04::after,
+.item_theme_05::after,
+.item_theme_09:nth-child(2n - 1)::after {
+    top: -12px;
+    left: -12px;
+    height: calc(100% + 24px);
+    width: calc(100% + 24px);
+    border-radius: 16px;
+}
+
+.item_theme_06::after,
+.item_theme_12::after {
+    border-radius: 16px;
+}
+
+.swiper {
+    width: 100%;
+    height: 900px;
+}
+
+.slider_theme_1 {
+    .slider__item {
+        max-width: 456px !important;
+    }
+}
+
+.slider_theme_2 {
+    .slider__item {
+        max-width: 670px !important;
+    }
+}
+
+.slider_theme_3 {
+    background: url(@img/background/background-01.jpg);
+    background-blend-mode: color-dodge, color, normal, normal;
+    border-radius: 16px;
+    padding: 80px 120px !important;
+
+    .slider__header {
+        color: #fff;
+    }
+
+    .slider__prev {
+        background: conic-gradient(from 180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    }
+
+    .slider__prev::before {
+        background: #558499;
+    }
+
+    .slider__next {
+        background: #fff;
+    }
+
+    .slider__item-side-container,
+    .slider__item-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            margin: 0px 0px 8px 0px;
+        }
+
+    }
+
+    .slider__item-side-container-wrapper,
+    .slider__item-container-wrapper {
+        margin: 0px 0px 24px 0px;
+    }
+
+    .slider__item-rating {
+        margin: 0px 0px 24px 0px;
+
+    }
+
+    .slider__item {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 64px;
+    }
+
+    .slider__item-image {
+        position: relative;
+        width: 88px;
+        height: 88px;
+        border: 1px solid #0B4F6C;
+        border-radius: 1000px;
+        margin: 0px 0px 32px 0px;
+    }
+
+}
+
+.rating-star {
+    width: 20px;
+    height: 20px;
+    background: url(../img/icons/rating-star.png);
+    background-size: contain;
+}
+
+.phone {
+    white-space: nowrap;
+}
+
+.ul {
+    li {
+        list-style-type: none;
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+
+        &::before {
+            content: '';
+            background: #0B4F6C;
+            min-width: 8px;
+            height: 8px;
+            border-radius: 2.5px;
+        }
+    }
+}
+
+.checkbox {
+
+    input {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    span {
+        display: flex;
+        gap: 12px;
+    }
+
+    & span::before {
+        display: inline-flex;
+        content: '';
+        background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.41017 0.757197C8.60286 0.956897 8.60286 1.28067 8.41017 1.48037L3.63573 7.06479C3.44304 7.26449 3.13062 7.26449 2.93793 7.06479L0.306351 4.33752C0.113658 4.13782 0.113658 3.81404 0.306351 3.61434C0.499043 3.41464 0.81146 3.41464 1.00415 3.61434L3.28683 5.98002L7.71237 0.757197C7.90506 0.557497 8.21747 0.557497 8.41017 0.757197Z' fill='%238D8D8D'/%3E%3C/svg%3E%0A") no-repeat center;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #8D8D8D;
+        border-radius: 4px;
+        transition: all 0.3s ease 0s;
+    }
+
+    & input:checked+span::before {
+        background: url("data:image/svg+xml,%3Csvg width='9' height='8' viewBox='0 0 9 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.41017 0.757197C8.60286 0.956897 8.60286 1.28067 8.41017 1.48037L3.63573 7.06479C3.44304 7.26449 3.13062 7.26449 2.93793 7.06479L0.306351 4.33752C0.113658 4.13782 0.113658 3.81404 0.306351 3.61434C0.499043 3.41464 0.81146 3.41464 1.00415 3.61434L3.28683 5.98002L7.71237 0.757197C7.90506 0.557497 8.21747 0.557497 8.41017 0.757197Z' fill='%23FFFFFF'/%3E%3C/svg%3E%0A") no-repeat center, #0B4F6C;
+    }
+}
+
+.item_theme_13 {
+    box-shadow: 0px 8px 24px rgba(19, 158, 236, 0.2);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 456px;
+
+    .item__image {
+        position: relative;
+        width: 376px;
+        height: 206px;
+        margin: 0px 0px 32px 0px;
+    }
+}
+
+.item_theme_14 {
+    padding: 32px;
+    max-width: calc(50% - 10px);
+    box-shadow: none;
+    border: 1px solid #D1EAF5;
+    border-radius: 16px;
+
+    .item__image {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        height: 80px;
+        margin: 0px 0px 40px 0px;
+
+        img {
+            position: relative;
+            width: 80px;
+            background: url(), linear-gradient(0deg, #1877AC, #1877AC), linear-gradient(0deg, rgba(5, 60, 109, 0.75), rgba(5, 60, 109, 0.75)), url(low-angle-shot-metal-black-ceiling-with-white-ventilation-pipes.jpg);
+            background-blend-mode: color-dodge, color, normal, normal;
+            border-radius: 200px;
+        }
+    }
+}
+
+.container_theme_1 {
+    .content {
+        &:first-child {
+            justify-content: start;
+            max-width: 440px;
+        }
+    }
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
