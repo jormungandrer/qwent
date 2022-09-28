@@ -19,7 +19,9 @@
 
     <div class="header__container container">
         <div class="header__logo">
-            <img src="@img/logo/qwent.png" alt="" />
+            <a href="">
+                <img src="@img/logo/qwent.png" alt="" />
+            </a>
         </div>
         <div class="header__adress">
             <p>Москва, Дмитровское шоссе, 163А, к. 2</p>
@@ -40,11 +42,23 @@
             <a href="" class="header__menu-item">Контакты</a>
         </nav>
     </div>
-
-    <div class="header__breadcrumbs breadcrumbs">
-        <nav class="breadcrumbs__container container">
-            <a href="" class="breadcrumbs__item">Главная страница</a>
-            <a href="" class="breadcrumbs__item">Cтраница</a>
-        </nav>
+    <div class="header__btn">
+        <div class="header__btn-mob"></div>
     </div>
 </header>
+<div class="breadcrumbs">
+    <nav class="breadcrumbs__container container">
+        <a href="" class="breadcrumbs__item">Главная страница</a>
+        <a href="" class="breadcrumbs__item">Cтраница</a>
+    </nav>
+</div>
+
+<script>
+let btnHeader = document.querySelector(".header__btn"),
+    header = document.querySelector(".header"),
+    bodyMob = document.querySelector("body");
+btnHeader.addEventListener('click', function () {
+    header.classList.toggle("header__mob");
+    bodyMob.classList.toggle("body-mob");
+});
+</script>

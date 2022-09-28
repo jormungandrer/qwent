@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('html/head.html',{ "title":"Блог" })
+
+    <body>
+        @@include('html/header.html',{})
+        <main class="blog">
+            <section class="container article">
+                <div class="container__title">
+                    <h2>Инженерный блог Qwent</h2>
+                </div>
+                <div class="content__container">
+                    <div class="content__tabs">
+                        <div class="tabs">
+                            <div class="tabs__list">
+                                <div class="tabs__item filter_button filter_button_active">Все статьи</div>
+                                <div class="tabs__item filter_button">Вентиляция</div>
+                                <div class="tabs__item filter_button">Кондиционирование</div>
+                                <div class="tabs__item filter_button">Дымоудаление</div>
+                                <div class="tabs__item filter_button">...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container__list list-3">
+                    <div class="list-3__item">
+                        <div class="item-content">
+                            <div class="item__image">
+                                <img src="img/art-img.jpg" alt="" />
+                            </div>
+                            <div class="item__title">
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h3>
+                            </div>
+                            <div class="item__description">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Quos tempora nam magni, alias
+                                    rerum, perspiciatis commodi et inventore,
+                                    sapiente optio vel fugit ipsa. Repudiandae
+                                    assumenda quibusdam architecto, quaerat ducimus
+                                    eligendi.
+                                </p>
+                            </div>
+                            <div class="item__time-to-read">
+                                <span>Время чтения:</span><span>5 минут</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-3__item">
+                        <div class="item-content">
+                            <div class="item__image">
+                                <img src="img/art-img.jpg" alt="" />
+                            </div>
+                            <div class="item__title">
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h3>
+                            </div>
+                            <div class="item__description">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Quos tempora nam magni, alias
+                                    rerum, perspiciatis commodi et inventore,
+                                    sapiente optio vel fugit ipsa. Repudiandae
+                                    assumenda quibusdam architecto, quaerat ducimus
+                                    eligendi.
+                                </p>
+                            </div>
+                            <div class="item__time-to-read">
+                                <span>Время чтения:</span><span>1 минута</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="list-3__item">
+                        <div class="item-content">
+                            <div class="item__image">
+                                <img src="img/art-img.jpg" alt="" />
+                            </div>
+                            <div class="item__title">
+                                <h3>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </h3>
+                            </div>
+                            <div class="item__description">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. Quos tempora nam magni, alias
+                                    rerum, perspiciatis commodi et inventore,
+                                    sapiente optio vel fugit ipsa. Repudiandae
+                                    assumenda quibusdam architecto, quaerat ducimus
+                                    eligendi.
+                                </p>
+                            </div>
+                            <div class="item__time-to-read">
+                                <span>Время чтения:</span><span>3 минуты</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container">
+                <div class="pagination">
+                    <div class="pagination__list">
+                        <div class="pagination__item pagination__prev"><a href="" class="pagination__link"></a></div>
+                        <div class="pagination__item"><a href="" class="pagination__link">1</a></div>
+                        <div class="pagination__item"><a href="" class="pagination__link pagination__link-active">2</a></div>
+                        <div class="pagination__item"><a href="" class="pagination__link">3</a></div>
+                        <div class="pagination__item pagination__next"><a href="" class="pagination__link"></a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

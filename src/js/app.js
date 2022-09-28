@@ -10,13 +10,13 @@ function multiplier(element, value) {
     }
 }
 
-multiplier('item_theme_01', 5)
+//multiplier('item_theme_01', 5)
 // multiplier('item_theme_02', 10)
-multiplier('item_theme_03', 5)
-multiplier('item_theme_04', 5)
-multiplier('item_theme_05', 5)
-multiplier('item_theme_06', 5)
-multiplier('item_theme_07', 5)
+//multiplier('item_theme_03', 5)
+//multiplier('item_theme_04', 5)
+//multiplier('item_theme_05', 5)
+//multiplier('item_theme_06', 5)
+//multiplier('item_theme_07', 5)
 multiplier('item_theme_08', 5)
 multiplier('item_theme_09', 3)
 multiplier('tabs__item', 7)
